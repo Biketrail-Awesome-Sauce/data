@@ -24,3 +24,7 @@ OSM Surface Bicycle trail data Geojson
 	4 null features
 
 	22883 Multilinestring geometry Features
+
+	Created Postgis database with these features and used st_linemerge to make the multilinstrings into linstrings if 		possible. 22830 of them merged into Linestrings.
+
+--- Trying different queries to see what is the same and different
