@@ -9,3 +9,4 @@
 - from the description `does not represent all on- and off-street bikeways in Hennepin County`
 - as defined by the 2040 Bicycle Transportation Plan
 - metadata [link to pdf](https://gis.hennepin.us/OpenData/Metadata/Bikeways.pdf) **5 attributes**
+- EPSG:26915
