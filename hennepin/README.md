@@ -12,8 +12,17 @@
 - EPSG:26915
 - 5256 records
 
-#####Differences with cyclopath data `select count(h.gid) from hcbikeways h LEFT JOIN hccyclopath c on ST_EQUALS(c.geom, h.geom) where c.gid is NULL;`
+#####Differences with cyclopath data `select count(h.gid) from hcbikeways h JOIN hccyclopath c on ST_EQUALS(c.geom, h.geom);`
 - none of the cyclopath data and hennepin county data are spatially equal (ST_EQUALS)
-- 1044 of the hennepin county data are not within 3 meters (ST_DWITHIN) of a cyclopath trail (Cyclopath contains on and off trails, and regular roads
+- 1044 of the hennepin county data are not within 3 meters (ST_DWITHIN) of a cyclopath trail (Cyclopath contains on- and off-street trails, and regular roads
 - 1044 includes hennepin county data that is outside of hennepin county
 - 679 differ by 3 meters within hennepin county
+
+#####Differences with MetCouncil data [link](https://gisdata.mn.gov/dataset/us-mn-state-metc-trans-bikeways)
+- Generally ~40% differ by more than 3 meters with MetCouncil Data
+- 2528 hennepin county on/off-street trails aren't within 3 meters of a MetCouncil trail
+
+
+
+#####Differences with the Hennepin portion of the Minnesota roads [link](https://gisdata.mn.gov/dataset/trans-roads-mndot-tis) provided by MNDOT
+-- 77 on-street trails are 3 meters away from a road
