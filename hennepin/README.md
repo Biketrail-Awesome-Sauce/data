@@ -16,7 +16,6 @@
 #####Differences with cyclopath data `select count(h.gid) from hcbikeways h JOIN hccyclopath c on ST_EQUALS(c.geom, h.geom);`
 - none of the cyclopath data and hennepin county data are spatially equal (ST_EQUALS)
 - 1044/5256 of the hennepin county data are not within 3 meters (ST_DWITHIN) of a cyclopath trail (Cyclopath contains on- and off-street trails, and regular roads
-- 1044/5256 includes hennepin county data that is outside of hennepin county
 - 679/4879 differ by 3 meters within hennepin county
 
 #####Differences with MetCouncil data [link](https://gisdata.mn.gov/dataset/us-mn-state-metc-trans-bikeways)
